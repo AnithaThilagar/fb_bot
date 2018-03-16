@@ -1,0 +1,33 @@
+{
+  "name": "fb_bot",
+  "version": "1.0.0",
+  "description": "To integrate the fb bot with the dialogflow using node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnithaThilagar/fb_bot.git"
+  },
+  "keywords": [
+    "fb",
+    "bot",
+    "dialogflow",
+    "account-linking",
+    "chatlogs"
+  ],
+  "author": "AnithaThilagar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnithaThilagar/fb_bot/issues"
+  },
+  "homepage": "https://github.com/AnithaThilagar/fb_bot#readme",
+  "dependencies": {
+    "apiai": "^3.0.3",
+    "express": "^4.16.2",
+    "body-parser": "^1.18.2",
+    "request": "^2.83.0"
+  }
+}
