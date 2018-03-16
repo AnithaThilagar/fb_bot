@@ -5,7 +5,7 @@ const express = require('express'),
     request = require('request'),
     apiai = require('apiai'),
     app = express(),
-    apiaiApp = apiai('9aa0c027ec0543f3b0a30ed3f829297b');
+    apiaiApp = apiai('1c5c2bd1f8b548b18f3782ca17420f2c');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -14,7 +14,7 @@ const server = app.listen(process.env.PORT || 5000, () => {
     console.log('Express server running on port %d in %s mode ', server.address().port, app.settings.env);
 });
 
-app.get('/', (req, res) => {
+app.get('/webhook', (req, res) => {
     console.log("Inside get method");
     if (req.query['hub.mode'] && req.query['hub.verify_token'] === 'reportIt') {
         res.status(200).send(req.query['hub.challenge']);
@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
     }
 });
 
-app.post('/', (req, res) => {
+app.post('/webhook', (req, res) => {
     console.log("Inside post method");
     console.log(req.body);
     if (req.body.object === 'page') {
