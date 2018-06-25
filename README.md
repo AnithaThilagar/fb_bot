@@ -1,2 +1,2 @@
 # fb_bot
-To integrate fb with api and dialogflow
+Sample to integrate fb with dialogflow using Node JS
